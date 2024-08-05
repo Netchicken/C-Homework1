@@ -241,6 +241,7 @@
             btnCalculate.TabIndex = 13;
             btnCalculate.Text = "Calculate Price";
             btnCalculate.UseVisualStyleBackColor = true;
+            btnCalculate.Click += btnCalculate_Click;
             // 
             // Form1
             // 

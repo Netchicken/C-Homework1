@@ -13,13 +13,12 @@ namespace C__Homework1
         {
             Single goldProteinCost = 60, veganCost = 80, muscleCost = 75;
             float bronze = 0.1f, silver = 0.05f;
-            int goldProteinQuantity, veganQuantity, muscleQuantity;
             Single goldTotal = 0, veganTotal = 0, muscleTotal = 0, grandTotal = 0;
 
             //check for no brand selected
             if (!cbxGold.Checked && !cbxMuscle.Checked && !cbxVegan.Checked)
             {
-                MessageBox.Show("Select at least one Brand");
+                MessageBox.Show("Select at least one Product");
                 return;
             }
             // checked for no membership selected
@@ -36,12 +35,11 @@ namespace C__Homework1
                 bool success = int.TryParse(txtGoldQuantity.Text, out number);
                 if (success)
                 {
-                    goldProteinQuantity = number;
-                    goldTotal = goldProteinQuantity * goldProteinCost;
+                    goldTotal = number * goldProteinCost;
                 }
                 else
                 {
-                    MessageBox.Show("Include a quantity for your Selected Protein Powder");
+                    MessageBox.Show("Include a quantity for Gold Standard Whey Protein");
                 }
 
             }
@@ -52,28 +50,25 @@ namespace C__Homework1
                 bool success = int.TryParse(txtVeganQuatity.Text, out number);
                 if (success)
                 {
-                    veganQuantity = number;
-                    veganTotal = veganQuantity * veganCost;
+                    veganTotal = number * veganCost;
                 }
                 else
                 {
-                    MessageBox.Show("Include a quantity for your Selected Protein Powder");
+                    MessageBox.Show("Include a quantity for Vegan Protein Powder ");
                 }
             }
 
             if (cbxMuscle.Checked)
             {
-
                 int number;
                 bool success = int.TryParse(txtMuscleQuantity.Text, out number);
                 if (success)
                 {
-                    muscleQuantity = number;
-                    muscleTotal = muscleQuantity * muscleCost;
+                    muscleTotal = number * muscleCost;
                 }
                 else
                 {
-                    MessageBox.Show("Include a quantity for your Selected Protein Powder");
+                    MessageBox.Show("Include a quantity for Muscle Milk ");
                 }
 
             }
@@ -92,7 +87,7 @@ namespace C__Homework1
             }
 
             //final without discount for multiple brands or 8% tax
-            lblTotalPrice.Text = grandTotal.ToString();
+            lblTotalPrice.Text = "$" + grandTotal.ToString();
 
 
         }

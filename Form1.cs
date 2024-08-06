@@ -67,7 +67,6 @@ namespace C__Homework1
             if (cbxMuscle.Checked)
             {
                 int number;
-
                 if (int.TryParse(txtMuscleQuantity.Text, out number))
                 {
                     muscleTotal = number * muscleCost;
@@ -106,7 +105,7 @@ namespace C__Homework1
                     break;
             }
 
-            //final without discount for multiple brands or 8% tax
+            //tax added on
             grandTotal = (float)((grandTotal * 0.08) + grandTotal);
 
             lblTotalPrice.Text = "$" + grandTotal.ToString();

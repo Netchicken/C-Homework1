@@ -141,6 +141,9 @@ namespace C__Homework1
             txtTwoPersonQuantity.Text = string.Empty;
             txtfourPersonQuantity.Text = string.Empty;
             txtSixPersonQuantity.Text = string.Empty;
+            cbxTwoPerson.Checked = false;
+            cbxFourPerson.Checked = false;
+            cbxSixPerson.Checked = false;
 
 
             MessageBox.Show("Your Order has been placed ");

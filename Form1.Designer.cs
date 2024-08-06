@@ -48,6 +48,7 @@
             lblTotalPrice = new Label();
             btnCalculate = new Button();
             pictureBox1 = new PictureBox();
+            btnExit = new Button();
             gbxMeals.SuspendLayout();
             gbxMembership.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -284,12 +285,23 @@
             pictureBox1.TabIndex = 14;
             pictureBox1.TabStop = false;
             // 
+            // btnExit
+            // 
+            btnExit.Location = new Point(910, 261);
+            btnExit.Name = "btnExit";
+            btnExit.Size = new Size(159, 71);
+            btnExit.TabIndex = 15;
+            btnExit.Text = "Exit";
+            btnExit.UseVisualStyleBackColor = true;
+            btnExit.Click += btnExit_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gray;
             ClientSize = new Size(1086, 377);
+            Controls.Add(btnExit);
             Controls.Add(pictureBox1);
             Controls.Add(btnCalculate);
             Controls.Add(lblTotalPrice);
@@ -338,5 +350,6 @@
         private Label lblTotalPrice;
         private Button btnCalculate;
         private PictureBox pictureBox1;
+        private Button btnExit;
     }
 }

@@ -38,7 +38,7 @@ namespace C__Homework1
             {
                 int number;
 
-                if (int.TryParse(txtGoldQuantity.Text, out number))
+                if (int.TryParse(txtTwoPersonQuantity.Text, out number))
                 {
                     twoPersonMealTotal = number * twoPersonMeal;
                     countOfMeals++;
@@ -55,7 +55,7 @@ namespace C__Homework1
             {
                 int number;
 
-                if (int.TryParse(txtVeganQuatity.Text, out number))
+                if (int.TryParse(txtfourPersonQuantity.Text, out number))
                 {
                     fourPersonMealTotal = number * fourPersonMeal;
                     countOfMeals++;
@@ -70,7 +70,7 @@ namespace C__Homework1
             if (cbxSixPerson.Checked)
             {
                 int number;
-                if (int.TryParse(txtMuscleQuantity.Text, out number))
+                if (int.TryParse(txtSixPersonQuantity.Text, out number))
                 {
                     sixPersonMealTotal = number * sixPersonMeal;
                     countOfMeals++;
@@ -128,6 +128,22 @@ namespace C__Homework1
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnPlaceOrder_Click(object sender, EventArgs e)
+        {
+            //reset button to clear all fields
+
+            lblDiscountAmount.Text = string.Empty;
+            lblTotalPrice.Text = string.Empty;
+            lblTaxAmount.Text = string.Empty;
+            lblTotalPrice.Text = string.Empty;
+            txtTwoPersonQuantity.Text = string.Empty;
+            txtfourPersonQuantity.Text = string.Empty;
+            txtSixPersonQuantity.Text = string.Empty;
+
+
+            MessageBox.Show("Your Order has been placed ");
         }
     }
 }

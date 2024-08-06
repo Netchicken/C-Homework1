@@ -32,9 +32,9 @@
             cbxSixPerson = new CheckBox();
             cbxFourPerson = new CheckBox();
             cbxTwoPerson = new CheckBox();
-            txtGoldQuantity = new TextBox();
-            txtVeganQuatity = new TextBox();
-            txtMuscleQuantity = new TextBox();
+            txtTwoPersonQuantity = new TextBox();
+            txtfourPersonQuantity = new TextBox();
+            txtSixPersonQuantity = new TextBox();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
@@ -53,6 +53,7 @@
             label8 = new Label();
             lblTaxAmount = new Label();
             lblDiscountAmount = new Label();
+            btnPlaceOrder = new Button();
             gbxMeals.SuspendLayout();
             gbxMembership.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -108,29 +109,29 @@
             cbxTwoPerson.Text = "Two Person";
             cbxTwoPerson.UseVisualStyleBackColor = true;
             // 
-            // txtGoldQuantity
+            // txtTwoPersonQuantity
             // 
-            txtGoldQuantity.Location = new Point(774, 42);
-            txtGoldQuantity.Margin = new Padding(4, 5, 4, 5);
-            txtGoldQuantity.Name = "txtGoldQuantity";
-            txtGoldQuantity.Size = new Size(111, 31);
-            txtGoldQuantity.TabIndex = 2;
+            txtTwoPersonQuantity.Location = new Point(774, 42);
+            txtTwoPersonQuantity.Margin = new Padding(4, 5, 4, 5);
+            txtTwoPersonQuantity.Name = "txtTwoPersonQuantity";
+            txtTwoPersonQuantity.Size = new Size(111, 31);
+            txtTwoPersonQuantity.TabIndex = 2;
             // 
-            // txtVeganQuatity
+            // txtfourPersonQuantity
             // 
-            txtVeganQuatity.Location = new Point(774, 90);
-            txtVeganQuatity.Margin = new Padding(4, 5, 4, 5);
-            txtVeganQuatity.Name = "txtVeganQuatity";
-            txtVeganQuatity.Size = new Size(111, 31);
-            txtVeganQuatity.TabIndex = 3;
+            txtfourPersonQuantity.Location = new Point(774, 90);
+            txtfourPersonQuantity.Margin = new Padding(4, 5, 4, 5);
+            txtfourPersonQuantity.Name = "txtfourPersonQuantity";
+            txtfourPersonQuantity.Size = new Size(111, 31);
+            txtfourPersonQuantity.TabIndex = 3;
             // 
-            // txtMuscleQuantity
+            // txtSixPersonQuantity
             // 
-            txtMuscleQuantity.Location = new Point(774, 143);
-            txtMuscleQuantity.Margin = new Padding(4, 5, 4, 5);
-            txtMuscleQuantity.Name = "txtMuscleQuantity";
-            txtMuscleQuantity.Size = new Size(111, 31);
-            txtMuscleQuantity.TabIndex = 4;
+            txtSixPersonQuantity.Location = new Point(774, 143);
+            txtSixPersonQuantity.Margin = new Padding(4, 5, 4, 5);
+            txtSixPersonQuantity.Name = "txtSixPersonQuantity";
+            txtSixPersonQuantity.Size = new Size(111, 31);
+            txtSixPersonQuantity.TabIndex = 4;
             // 
             // label2
             // 
@@ -260,19 +261,19 @@
             // 
             lblTotalPrice.BackColor = Color.AliceBlue;
             lblTotalPrice.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
-            lblTotalPrice.Location = new Point(753, 277);
+            lblTotalPrice.Location = new Point(764, 274);
             lblTotalPrice.Margin = new Padding(4, 0, 4, 0);
             lblTotalPrice.Name = "lblTotalPrice";
-            lblTotalPrice.Size = new Size(150, 58);
+            lblTotalPrice.Size = new Size(139, 58);
             lblTotalPrice.TabIndex = 12;
             lblTotalPrice.TextAlign = ContentAlignment.MiddleRight;
             // 
             // btnCalculate
             // 
-            btnCalculate.Location = new Point(910, 52);
+            btnCalculate.Location = new Point(910, 83);
             btnCalculate.Margin = new Padding(4, 5, 4, 5);
             btnCalculate.Name = "btnCalculate";
-            btnCalculate.Size = new Size(159, 172);
+            btnCalculate.Size = new Size(159, 79);
             btnCalculate.TabIndex = 13;
             btnCalculate.Text = "Calculate Price";
             btnCalculate.UseVisualStyleBackColor = true;
@@ -322,9 +323,9 @@
             // lblTaxAmount
             // 
             lblTaxAmount.BackColor = Color.Azure;
-            lblTaxAmount.Location = new Point(763, 231);
+            lblTaxAmount.Location = new Point(764, 242);
             lblTaxAmount.Name = "lblTaxAmount";
-            lblTaxAmount.Size = new Size(106, 25);
+            lblTaxAmount.Size = new Size(140, 25);
             lblTaxAmount.TabIndex = 18;
             // 
             // lblDiscountAmount
@@ -332,8 +333,19 @@
             lblDiscountAmount.BackColor = Color.Azure;
             lblDiscountAmount.Location = new Point(763, 199);
             lblDiscountAmount.Name = "lblDiscountAmount";
-            lblDiscountAmount.Size = new Size(106, 25);
+            lblDiscountAmount.Size = new Size(140, 32);
             lblDiscountAmount.TabIndex = 19;
+            // 
+            // btnPlaceOrder
+            // 
+            btnPlaceOrder.Location = new Point(910, 172);
+            btnPlaceOrder.Margin = new Padding(4, 5, 4, 5);
+            btnPlaceOrder.Name = "btnPlaceOrder";
+            btnPlaceOrder.Size = new Size(159, 79);
+            btnPlaceOrder.TabIndex = 20;
+            btnPlaceOrder.Text = "Place Order";
+            btnPlaceOrder.UseVisualStyleBackColor = true;
+            btnPlaceOrder.Click += btnPlaceOrder_Click;
             // 
             // Form1
             // 
@@ -341,6 +353,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gray;
             ClientSize = new Size(1086, 377);
+            Controls.Add(btnPlaceOrder);
             Controls.Add(lblDiscountAmount);
             Controls.Add(lblTaxAmount);
             Controls.Add(label8);
@@ -356,9 +369,9 @@
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(txtMuscleQuantity);
-            Controls.Add(txtVeganQuatity);
-            Controls.Add(txtGoldQuantity);
+            Controls.Add(txtSixPersonQuantity);
+            Controls.Add(txtfourPersonQuantity);
+            Controls.Add(txtTwoPersonQuantity);
             Controls.Add(gbxMeals);
             Margin = new Padding(4, 5, 4, 5);
             Name = "Form1";
@@ -378,9 +391,9 @@
         private CheckBox cbxSixPerson;
         private CheckBox cbxFourPerson;
         private CheckBox cbxTwoPerson;
-        private TextBox txtGoldQuantity;
-        private TextBox txtVeganQuatity;
-        private TextBox txtMuscleQuantity;
+        private TextBox txtTwoPersonQuantity;
+        private TextBox txtfourPersonQuantity;
+        private TextBox txtSixPersonQuantity;
         private Label label2;
         private Label label3;
         private Label label4;
@@ -399,5 +412,6 @@
         private Label label8;
         private Label lblTaxAmount;
         private Label lblDiscountAmount;
+        private Button btnPlaceOrder;
     }
 }

@@ -49,6 +49,10 @@
             btnCalculate = new Button();
             pictureBox1 = new PictureBox();
             btnExit = new Button();
+            label1 = new Label();
+            label8 = new Label();
+            lblTaxAmount = new Label();
+            lblDiscountAmount = new Label();
             gbxMeals.SuspendLayout();
             gbxMembership.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -244,8 +248,8 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.BackColor = Color.PowderBlue;
-            label7.Location = new Point(499, 208);
+            label7.BackColor = Color.LightSeaGreen;
+            label7.Location = new Point(638, 277);
             label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
             label7.Size = new Size(91, 25);
@@ -256,10 +260,10 @@
             // 
             lblTotalPrice.BackColor = Color.AliceBlue;
             lblTotalPrice.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
-            lblTotalPrice.Location = new Point(609, 197);
+            lblTotalPrice.Location = new Point(753, 277);
             lblTotalPrice.Margin = new Padding(4, 0, 4, 0);
             lblTotalPrice.Name = "lblTotalPrice";
-            lblTotalPrice.Size = new Size(150, 80);
+            lblTotalPrice.Size = new Size(150, 58);
             lblTotalPrice.TabIndex = 12;
             lblTotalPrice.TextAlign = ContentAlignment.MiddleRight;
             // 
@@ -295,12 +299,52 @@
             btnExit.UseVisualStyleBackColor = true;
             btnExit.Click += btnExit_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.LightSeaGreen;
+            label1.Location = new Point(577, 199);
+            label1.Name = "label1";
+            label1.Size = new Size(152, 25);
+            label1.TabIndex = 16;
+            label1.Text = "Discount Amount";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.BackColor = Color.LightSeaGreen;
+            label8.Location = new Point(623, 231);
+            label8.Name = "label8";
+            label8.Size = new Size(106, 25);
+            label8.TabIndex = 17;
+            label8.Text = "Tax Amount";
+            // 
+            // lblTaxAmount
+            // 
+            lblTaxAmount.BackColor = Color.Azure;
+            lblTaxAmount.Location = new Point(763, 231);
+            lblTaxAmount.Name = "lblTaxAmount";
+            lblTaxAmount.Size = new Size(106, 25);
+            lblTaxAmount.TabIndex = 18;
+            // 
+            // lblDiscountAmount
+            // 
+            lblDiscountAmount.BackColor = Color.Azure;
+            lblDiscountAmount.Location = new Point(763, 199);
+            lblDiscountAmount.Name = "lblDiscountAmount";
+            lblDiscountAmount.Size = new Size(106, 25);
+            lblDiscountAmount.TabIndex = 19;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gray;
             ClientSize = new Size(1086, 377);
+            Controls.Add(lblDiscountAmount);
+            Controls.Add(lblTaxAmount);
+            Controls.Add(label8);
+            Controls.Add(label1);
             Controls.Add(btnExit);
             Controls.Add(pictureBox1);
             Controls.Add(btnCalculate);
@@ -351,5 +395,9 @@
         private Button btnCalculate;
         private PictureBox pictureBox1;
         private Button btnExit;
+        private Label label1;
+        private Label label8;
+        private Label lblTaxAmount;
+        private Label lblDiscountAmount;
     }
 }

@@ -18,6 +18,7 @@ namespace C__Homework1
             Single twoPersonMealTotal = 0, fourPersonMealTotal = 0, sixPersonMealTotal = 0, grandTotal = 0;
 
             int countOfMeals = 0;
+            int countOfTotalMeals = 0;
 
             //check for no brand selected
             if (!cbxTwoPerson.Checked && !cbxSixPerson.Checked && !cbxFourPerson.Checked)
@@ -41,6 +42,7 @@ namespace C__Homework1
                 {
                     twoPersonMealTotal = number * twoPersonMeal;
                     countOfMeals++;
+                    countOfTotalMeals += number;
                 }
                 else
                 {
@@ -57,6 +59,7 @@ namespace C__Homework1
                 {
                     fourPersonMealTotal = number * fourPersonMeal;
                     countOfMeals++;
+                    countOfTotalMeals += number;
                 }
                 else
                 {
@@ -71,14 +74,20 @@ namespace C__Homework1
                 {
                     sixPersonMealTotal = number * sixPersonMeal;
                     countOfMeals++;
+                    countOfTotalMeals += number;
                 }
                 else
                 {
-                    MessageBox.Show("Include a quantity of six persn meals ");
+                    MessageBox.Show("Include a quantity of six person meals ");
                 }
 
             }
+            if (countOfTotalMeals >= 10)
+            {
 
+                MessageBox.Show("Please reduce the quantity of meals to 10 or less ");
+                return;
+            }
 
             grandTotal = twoPersonMealTotal + fourPersonMealTotal + sixPersonMealTotal;
 
@@ -95,9 +104,11 @@ namespace C__Homework1
             switch (countOfMeals)
             {
                 case 2:
+                    lblDiscountAmount.Text = "$" + (grandTotal * 0.03).ToString();
                     grandTotal = grandTotal - (float)((grandTotal * 0.03));
                     break;
                 case 3:
+                    lblDiscountAmount.Text = "$" + (grandTotal * 0.05).ToString();
                     grandTotal = grandTotal - (float)((grandTotal * 0.05));
                     break;
                 default:
@@ -106,6 +117,7 @@ namespace C__Homework1
             }
 
             //tax added on
+            lblTaxAmount.Text = "$" + (grandTotal * 0.08).ToString();
             grandTotal = (float)((grandTotal * 0.08) + grandTotal);
 
             lblTotalPrice.Text = "$" + grandTotal.ToString();
